@@ -24,10 +24,18 @@ package "receivables" {
 
         class "DocumentType" <<Entity>> {
             - #VALID_TYPES: Map<string, string>
-            - #value: string
+            - #type: string
             + constructor(value: string)
             + get value(): string
             + equals(other: DocumentType): boolean
+        }
+
+        class "DocumentStatus" <<Entity>> {
+            - #VALID_STATUSES: Map<string, string>
+            - #status: string
+            + constructor(status: string)
+            + get status(): string
+            + equals(other: DocumentStatus): boolean
         }
     }
 
