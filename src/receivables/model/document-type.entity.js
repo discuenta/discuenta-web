@@ -18,16 +18,16 @@ export class DocumentType {
      * @type {string} The value of the document type.
      * @private
      */
-    #value;
+    #type;
 
     /**
      * Creates an instance of DocumentType.
-     * @param {string} value - The document type value.
+     * @param {string} type - The document type value.
      * @throws {ValidationError} If the provided value is not a valid document type.
      */
-    constructor(value) {
-        this.#validateType(value);
-        this.#value = value;
+    constructor(type) {
+        this.#validateType(type);
+        this.#type = type;
     }
 
     /**
@@ -48,8 +48,8 @@ export class DocumentType {
      * Gets the value of the document type.
      * @returns {string} The document type value.
      */
-    get value() {
-        return this.#value;
+    get type() {
+        return this.#type;
     }
 
     /**
@@ -58,6 +58,6 @@ export class DocumentType {
      * @returns {boolean} True if the two DocumentType instances are equal, otherwise false.
      */
     equals(other) {
-        return other instanceof DocumentType && this.#value === other.value;
+        return other instanceof DocumentType && this.#type === other.type;
     }
 }
