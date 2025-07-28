@@ -1,0 +1,45 @@
+@startuml Discuenta Class Diagram
+
+package "shared" {
+   package "components" {
+
+   }
+
+   package "model" {
+       class "Error" <<Entity>> {
+
+       }
+   }
+}
+
+package "receivables" {
+    package "components" {
+
+    }
+
+    package "model" {
+        class "Document" <<Entity>> {
+
+        }
+
+        class "DocumentType" <<Entity>> {
+            - #VALID_TYPES: Map<string, string>
+            - #value: string
+            + constructor(value: string)
+            + get value(): string
+            + equals(other: DocumentType): boolean
+        }
+    }
+
+    package "pages" {
+
+    }
+
+    package "services" {
+
+    }
+}
+
+'Relationship
+receivables.model.Document --> shared.model.Error : uses
+@enduml
