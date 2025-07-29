@@ -54,7 +54,8 @@ package "receivables" {
 }
 
 'Relationship
-receivables.model.Document --> shared.model.Error : uses
+receivables.model.DocumentStatus --> shared.model.Error : uses
+receivables.model.DocumentType --> shared.model.Error : uses
 receivables.model.Document --> receivables.model.DocumentType : uses
 receivables.model.Document --> receivables.model.DocumentStatus : uses
 @enduml
