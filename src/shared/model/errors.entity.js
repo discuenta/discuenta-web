@@ -13,3 +13,5 @@ export class ValidationError extends Error {
         this.name = 'ValidationError';
     }
 }
+
+// Additional custom error classes can be defined here as needed
