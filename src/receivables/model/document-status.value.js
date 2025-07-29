@@ -2,6 +2,7 @@ import {ValidationError} from "../../shared/model/errors.entity.js";
 
 /**
  * Represents the status of a document.
+ * @author Salim Ramirez
  */
 export class DocumentStatus {
     /**
