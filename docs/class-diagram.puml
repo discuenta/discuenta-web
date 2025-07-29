@@ -18,11 +18,11 @@ package "receivables" {
     }
 
     package "model" {
-        class "Document" <<Entity>> {
+        entity "Document" <<Entity>> {
 
         }
 
-        class "DocumentType" <<Entity>> {
+        class "DocumentType" <<Value Object>> {
             - #VALID_TYPES: Map<string, string>
             - #type: string
             + constructor(value: string)
@@ -30,7 +30,7 @@ package "receivables" {
             + equals(other: DocumentType): boolean
         }
 
-        class "DocumentStatus" <<Entity>> {
+        class "DocumentStatus" <<Value Object>> {
             - #VALID_STATUSES: Map<string, string>
             - #status: string
             + constructor(status: string)
