@@ -23,19 +23,24 @@ package "receivables" {
         }
 
         class "DocumentType" <<Value Object>> {
-            - #VALID_TYPES: Map<string, string>
+            + {static} DRAFT: DocumentType
+            + {static} INVOICE: DocumentType
             - #type: string
-            + constructor(value: string)
-            + get value(): string
+            + constructor(type: string)
+            + get type(): string
             + equals(other: DocumentType): boolean
+            + {static} fromString(typeString: string): DocumentType
         }
 
         class "DocumentStatus" <<Value Object>> {
-            - #VALID_STATUSES: Map<string, string>
+            + {static} PENDING: DocumentStatus
+            + {static} DISCOUNTED: DocumentStatus
+            + {static} CANCELLED: DocumentStatus
             - #status: string
             + constructor(status: string)
             + get status(): string
             + equals(other: DocumentStatus): boolean
+            + {static} fromString(statusString: string): DocumentStatus
         }
     }
 
@@ -50,4 +55,6 @@ package "receivables" {
 
 'Relationship
 receivables.model.Document --> shared.model.Error : uses
+receivables.model.Document --> receivables.model.DocumentType : uses
+receivables.model.Document --> receivables.model.DocumentStatus : uses
 @enduml
