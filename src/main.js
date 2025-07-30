@@ -7,6 +7,7 @@ import 'primeicons/primeicons.css';
 import {
     Button
 } from 'primevue';
+import i18n from "./i18n.js";
 import router from './router/index.js';
 
 // noinspection JSCheckFunctionSignatures
@@ -17,5 +18,6 @@ createApp(App)
         }
     })
     .component('pv-button', Button)
+    .use(i18n)
     .use(router)
     .mount('#app')
