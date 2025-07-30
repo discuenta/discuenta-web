@@ -1,5 +1,21 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from 'vue';
+import './style.css';
+import App from './app.vue';
+import PrimeVue from 'primevue/config';
+import Aura from '@primeuix/themes/aura';
+import 'primeicons/primeicons.css';
+import {
+    Button
+} from 'primevue';
+import router from './router/index.js';
 
-createApp(App).mount('#app')
+// noinspection JSCheckFunctionSignatures
+createApp(App)
+    .use(PrimeVue, {
+        theme: {
+            preset: Aura
+        }
+    })
+    .component('pv-button', Button)
+    .use(router)
+    .mount('#app')

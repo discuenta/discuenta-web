@@ -1,0 +1,61 @@
+@startuml Discuenta Class Diagram
+
+package "shared" {
+   package "components" {
+
+   }
+
+   package "model" {
+       class "Error" <<Entity>> {
+
+       }
+   }
+}
+
+package "receivables" {
+    package "components" {
+
+    }
+
+    package "model" {
+        entity "Document" <<Entity>> {
+
+        }
+
+        class "DocumentType" <<Value Object>> {
+            + {static} DRAFT: DocumentType
+            + {static} INVOICE: DocumentType
+            - #type: string
+            + constructor(type: string)
+            + get type(): string
+            + equals(other: DocumentType): boolean
+            + {static} fromString(typeString: string): DocumentType
+        }
+
+        class "DocumentStatus" <<Value Object>> {
+            + {static} PENDING: DocumentStatus
+            + {static} DISCOUNTED: DocumentStatus
+            + {static} CANCELLED: DocumentStatus
+            - #status: string
+            + constructor(status: string)
+            + get status(): string
+            + equals(other: DocumentStatus): boolean
+            + {static} fromString(statusString: string): DocumentStatus
+        }
+    }
+
+    package "pages" {
+
+    }
+
+    package "services" {
+
+    }
+}
+
+'Relationship
+receivables.model.DocumentStatus --> shared.model.Error : uses
+receivables.model.DocumentType --> shared.model.Error : uses
+receivables.model.Document --> receivables.model.DocumentType : uses
+receivables.model.Document --> receivables.model.DocumentStatus : uses
+@enduml
