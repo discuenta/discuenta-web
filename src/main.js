@@ -13,6 +13,7 @@ import router from './router/index.js';
 // noinspection JSCheckFunctionSignatures
 createApp(App)
     .use(PrimeVue, {
+        ripple: true,
         theme: {
             preset: Aura
         }
