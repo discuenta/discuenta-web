@@ -5,7 +5,7 @@ import PrimeVue from 'primevue/config';
 import Aura from '@primeuix/themes/aura';
 import 'primeicons/primeicons.css';
 import {
-    Button
+    SelectButton, Button
 } from 'primevue';
 import i18n from "./i18n.js";
 import router from './router/index.js';
@@ -17,6 +17,7 @@ createApp(App)
             preset: Aura
         }
     })
+    .component('pv-select-button', SelectButton)
     .component('pv-button', Button)
     .use(i18n)
     .use(router)
