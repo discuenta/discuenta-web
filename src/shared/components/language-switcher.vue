@@ -8,6 +8,11 @@ export default {
   },
   created() {
     this.languages = this.$i18n.availableLocales;
+  },
+  watch: {
+    '$i18n.locale'(newLocale) {
+      localStorage.setItem('locale', newLocale);
+    }
   }
 }
 </script>
