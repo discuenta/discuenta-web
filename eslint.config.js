@@ -28,7 +28,6 @@ export default defineConfig([
       "vue/no-unused-properties": ["error", {
         groups: ["props", "data", "computed", "methods", "setup"],
       }],
-      "vue/no-empty-component-block": "error",
 
       "require-await": "warn",
       "no-console": "warn",
