@@ -1,14 +1,11 @@
-<script>
+<script setup>
 import LanguageSwitcher from './language-switcher.vue';
-
-export default {
-  name: 'MainLayout',
-  components: { LanguageSwitcher },
-};
+import ThemeToggle from './theme-toggle.vue';
 </script>
 
 <template>
   <div class="main-layout">
+    <theme-toggle />
     <header>
       <h1>My Application</h1>
     </header>
@@ -24,6 +21,4 @@ export default {
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
