@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint src --ext .vue,.js",
+    "lint:fix": "eslint src --ext .vue,.js --fix",
+    "format": "prettier --write src/**/*.{js,vue}",
+    "format:check": "prettier --check src/**/*.{js,vue}"
   },
   "dependencies": {
     "@primeuix/themes": "^1.2.1",
