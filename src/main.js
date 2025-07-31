@@ -5,7 +5,7 @@ import PrimeVue from 'primevue/config';
 import Aura from '@primeuix/themes/aura';
 import { definePreset } from '@primeuix/themes';
 import 'primeicons/primeicons.css';
-import { Drawer, SelectButton, Button, ToggleSwitch } from 'primevue';
+import { Button, Drawer, SelectButton, ToggleSwitch, Toolbar } from 'primevue';
 import i18n from './i18n.js';
 import router from './router/index.js';
 
@@ -74,10 +74,11 @@ createApp(App)
       },
     },
   })
+  .component('pv-button', Button)
   .component('pv-drawer', Drawer)
   .component('pv-select-button', SelectButton)
-  .component('pv-button', Button)
   .component('pv-toggle-switch', ToggleSwitch)
+  .component('pv-toolbar', Toolbar)
   .use(i18n)
   .use(router)
   .mount('#app');
