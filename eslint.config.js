@@ -26,10 +26,7 @@ export default defineConfig([
       "no-debugger": "error",
       "prefer-const": "error",
       "no-var": "error",
-      "no-unused-vars": "error",
-
-      "semi": ["error", "always"],
-      "quotes": ["error", "single"]
+      "no-unused-vars": "error"
     }
   },
   eslintConfigPrettier
