@@ -1,6 +1,7 @@
 import js from "@eslint/js";
 import globals from "globals";
 import pluginVue from "eslint-plugin-vue";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
 import { defineConfig } from "eslint/config";
 
 export default defineConfig([
@@ -31,4 +32,5 @@ export default defineConfig([
       "quotes": ["error", "single"]
     }
   },
+  eslintConfigPrettier
 ]);
