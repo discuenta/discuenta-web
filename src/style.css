@@ -9,14 +9,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --body-color: var(--p-text-color);
-  --body-bg: var(--p-surface-0);
+  --body-bg: var(--p-surface-50);
 }
 
 /*noinspection CssUnresolvedCustomProperty*/
 :root[class="app-dark"] {
   color-scheme: dark;
   --body-color: var(--p-text-color);
-  --body-bg: var(--p-surface-950);
+  --body-bg: var(--p-surface-900);
 }
 
 body {
