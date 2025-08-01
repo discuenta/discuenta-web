@@ -64,7 +64,7 @@ defineExpose({ open, close });
   left: 0;
   top: 0;
   height: 100vh;
-  background: var(--body-light);
+  background: var(--body-bg);
   border-right: 10px solid inherit;
   transition:
     transform 0.3s ease,
