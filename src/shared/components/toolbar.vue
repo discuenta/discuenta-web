@@ -27,5 +27,7 @@ const emit = defineEmits(['toggle-sidebar']);
   margin: 0;
   padding: 1rem 2rem;
   box-sizing: border-box;
+  background: var(--surface-50);
+  transition: 0.3s ease;
 }
 </style>
