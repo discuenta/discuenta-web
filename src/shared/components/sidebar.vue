@@ -73,6 +73,7 @@ defineExpose({ open, close });
   width: 250px;
   overflow: hidden;
   z-index: 100;
+  box-shadow: 1px 0 4px rgba(0, 0, 0, 0.1);
   transform: translateX(-100%);
 }
 
