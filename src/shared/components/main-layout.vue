@@ -1,7 +1,5 @@
 <!--suppress JSUnresolvedReference -->
 <script setup>
-import LanguageSwitcher from './language-switcher.vue';
-import ThemeToggle from './theme-toggle.vue';
 import Toolbar from './toolbar.vue';
 import Sidebar from './sidebar.vue';
 import { ref, onMounted, onUnmounted } from 'vue';
@@ -56,7 +54,6 @@ onUnmounted(() => {
         },
       ]"
     >
-      <theme-toggle />
       <header>
         <h1>My Application</h1>
       </header>
@@ -67,7 +64,6 @@ onUnmounted(() => {
         </ul>
       </nav>
       <main>
-        <language-switcher />
         <router-view />
       </main>
     </div>
