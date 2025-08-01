@@ -3,7 +3,7 @@ const emit = defineEmits(['toggle-sidebar']);
 </script>
 
 <template>
-  <pv-toolbar>
+  <pv-toolbar class="pv-toolbar">
     <template #start>
       <pv-button @click="emit('toggle-sidebar')">=</pv-button>
       <p>Este es el dashboard</p>
@@ -20,4 +20,11 @@ const emit = defineEmits(['toggle-sidebar']);
   </pv-toolbar>
 </template>
 
-<style scoped></style>
+<style scoped>
+.pv-toolbar {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+</style>
