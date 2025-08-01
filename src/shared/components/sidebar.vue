@@ -64,8 +64,8 @@ defineExpose({ open, close });
   left: 0;
   top: 0;
   height: 100vh;
-  background: var(--body-bg);
-  border-right: 10px solid inherit;
+  background: var(--surface-50);
+  border-right: 1px solid var(--surface-200);
   transition:
     transform 0.3s ease,
     background-color 0.3s ease,
@@ -73,7 +73,6 @@ defineExpose({ open, close });
   width: 250px;
   overflow: hidden;
   z-index: 100;
-  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
   transform: translateX(-100%);
 }
 
