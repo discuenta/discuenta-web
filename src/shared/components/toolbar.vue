@@ -1,4 +1,7 @@
 <script setup>
+import ThemeToggle from './theme-toggle.vue';
+import LanguageSwitcher from './language-switcher.vue';
+
 const emit = defineEmits(['toggle-sidebar']);
 </script>
 
@@ -11,6 +14,8 @@ const emit = defineEmits(['toggle-sidebar']);
 
     <template #end>
       <div>
+        <theme-toggle />
+        <language-switcher />
         <pv-avatar
           image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png"
           style="width: 32px; height: 32px"
