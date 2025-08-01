@@ -34,7 +34,6 @@ onMounted(() => {
     severity="secondary"
     text
     rounded
-    style="position: fixed; top: 20px; right: 20px; z-index: 1000"
     @click="toggleTheme"
   />
 </template>
