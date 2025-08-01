@@ -6,7 +6,17 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "clean": "rm -rf dist node_modules/.vite",
+    "build:prod": "npm run check && npm run build",
+    "dev:clean": "npm run clean && npm install && npm run dev",
+    "fix": "npm run lint:fix && npm run format",
+    "lint": "eslint src --ext .vue,.js",
+    "lint:fix": "eslint src --ext .vue,.js --fix",
+    "check": "npm run lint && npm run format:check",
+    "format": "prettier --write src/**/*.{js,vue}",
+    "format:check": "prettier --check src/**/*.{js,vue}",
+    "pre-commit": "npm run check"
   },
   "dependencies": {
     "@primeuix/themes": "^1.2.1",
@@ -18,7 +28,13 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.32.0",
     "@vitejs/plugin-vue": "^6.0.0",
+    "eslint": "^9.32.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-vue": "^10.3.0",
+    "globals": "^16.3.0",
+    "prettier": "3.6.2",
     "vite": "^7.0.4"
   }
 }
