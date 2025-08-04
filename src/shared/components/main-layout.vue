@@ -15,9 +15,11 @@ function checkMobile() {
 
 function toggleSidebar() {
   sidebarRef.value?.open();
-  if (!isMobile.value) {
-    sidebarExpanded.value = !sidebarExpanded.value;
-  }
+}
+
+function onSidebarChanged(state) {
+  sidebarExpanded.value = state.expanded && !state.isMobile;
+  isMobile.value = state.isMobile;
 }
 
 onMounted(() => {
@@ -45,7 +47,7 @@ onUnmounted(() => {
     >
       <toolbar @toggle-sidebar="toggleSidebar" />
     </div>
-    <sidebar ref="sidebarRef" />
+    <sidebar ref="sidebarRef" @sidebar-changed="onSidebarChanged" />
     <div
       :class="[
         'content-wrapper',
