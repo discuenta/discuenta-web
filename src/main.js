@@ -110,6 +110,28 @@ const CustomPreset = definePreset(Aura, {
       },
     },
   },
+  components: {
+    menu: {
+      colorScheme: {
+        light: {
+          root: {
+            background: '{pink.50}',
+            border: {
+              color: '{indigo.500}',
+            },
+          },
+        },
+        dark: {
+          root: {
+            background: '{slate.800}',
+            border: {
+              color: '{indigo.500}',
+            },
+          },
+        },
+      },
+    },
+  },
 });
 
 // noinspection JSCheckFunctionSignatures
