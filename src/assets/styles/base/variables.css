@@ -1,0 +1,14 @@
+:root {
+    /* Font settings */
+    --font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --line-height-base: 1.5;
+
+    /* Transitions */
+    --transition-theme: background-color 0.3s, color 0.3s;
+
+    /* Layout */
+    --min-width: 320px;
+    --app-padding: 1.2rem;
+}
