@@ -18,6 +18,47 @@ import router from './router/index.js';
 
 // noinspection JSCheckFunctionSignatures
 const CustomPreset = definePreset(Aura, {
+  primitive: {
+    indigo: {
+      50: '#eef2ff',
+      100: '#e0e7ff',
+      200: '#c7d2fe',
+      300: '#a5b4fc',
+      400: '#818cf8',
+      500: '#6366f1',
+      600: '#4f46e5',
+      700: '#4338ca',
+      800: '#3730a3',
+      900: '#312e81',
+      950: '#1e1b4b',
+    },
+    blue: {
+      50: '#eff6ff',
+      100: '#dbeafe',
+      200: '#bfdbfe',
+      300: '#93c5fd',
+      400: '#60a5fa',
+      500: '#3b82f6',
+      600: '#2563eb',
+      700: '#1d4ed8',
+      800: '#1e40af',
+      900: '#1e3a8a',
+      950: '#172554',
+    },
+    slate: {
+      50: '#f8fafc',
+      100: '#f1f5f9',
+      200: '#e2e8f0',
+      300: '#cbd5e1',
+      400: '#94a3b8',
+      500: '#64748b',
+      600: '#475569',
+      700: '#334155',
+      800: '#1e293b',
+      900: '#0f172a',
+      950: '#020617',
+    },
+  },
   semantic: {
     primary: {
       50: '{indigo.50}',
@@ -31,6 +72,19 @@ const CustomPreset = definePreset(Aura, {
       800: '{indigo.800}',
       900: '{indigo.900}',
       950: '{indigo.950}',
+    },
+    secondary: {
+      50: '{blue.50}',
+      100: '{blue.100}',
+      200: '{blue.200}',
+      300: '{blue.300}',
+      400: '{blue.400}',
+      500: '{blue.500}',
+      600: '{blue.600}',
+      700: '{blue.700}',
+      800: '{blue.800}',
+      900: '{blue.900}',
+      950: '{blue.950}',
     },
     surface: {
       0: '#ffffff',
