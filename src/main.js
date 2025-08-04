@@ -9,6 +9,7 @@ import {
   Avatar,
   Button,
   Drawer,
+  Menu,
   SelectButton,
   ToggleSwitch,
   Toolbar,
@@ -127,6 +128,7 @@ createApp(App)
   .component('pv-avatar', Avatar)
   .component('pv-button', Button)
   .component('pv-drawer', Drawer)
+  .component('pv-menu', Menu)
   .component('pv-select-button', SelectButton)
   .component('pv-toggle-switch', ToggleSwitch)
   .component('pv-toolbar', Toolbar)
