@@ -16,6 +16,7 @@
   --surface-200: var(--p-surface-200);
   --surface-300: var(--p-surface-300);
   --surface-950: var(--p-surface-950);
+  --sidebar-bg: var(--p-surface-0);
 }
 
 /*noinspection CssUnresolvedCustomProperty*/
@@ -29,6 +30,7 @@
   --surface-200: var(--p-surface-700);
   --surface-300: var(--p-surface-600);
   --surface-950: var(--p-surface-50);
+  --sidebar-bg: var(--p-surface-900);
 }
 
 body {
@@ -63,7 +65,7 @@ h1 {
 #app {
   width: 100%;
   margin: 0;
-  padding: 1rem;
+  padding: 1.2rem;
   text-align: left;
   box-sizing: border-box;
 }
