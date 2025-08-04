@@ -16,6 +16,7 @@ import {
 import i18n from './i18n.js';
 import router from './router/index.js';
 
+// noinspection JSCheckFunctionSignatures
 const CustomPreset = definePreset(Aura, {
   semantic: {
     primary: {
@@ -31,38 +32,26 @@ const CustomPreset = definePreset(Aura, {
       900: '{indigo.900}',
       950: '{indigo.950}',
     },
+    surface: {
+      0: '#ffffff',
+      50: '{slate.50}',
+      100: '{slate.100}',
+      200: '{slate.200}',
+      300: '{slate.300}',
+      400: '{slate.400}',
+      500: '{slate.500}',
+      600: '{slate.600}',
+      700: '{slate.700}',
+      800: '{slate.800}',
+      900: '{slate.900}',
+      950: '{slate.950}',
+    },
     colorScheme: {
       light: {
-        surface: {
-          0: '#ffffff',
-          50: '{slate.50}',
-          100: '{slate.100}',
-          200: '{slate.200}',
-          300: '{slate.300}',
-          400: '{slate.400}',
-          500: '{slate.500}',
-          600: '{slate.600}',
-          700: '{slate.700}',
-          800: '{slate.800}',
-          900: '{slate.900}',
-          950: '{slate.950}',
-        },
+        surface: '{surface.color}',
       },
       dark: {
-        surface: {
-          0: '#ffffff',
-          50: '{slate.50}',
-          100: '{slate.100}',
-          200: '{slate.200}',
-          300: '{slate.300}',
-          400: '{slate.400}',
-          500: '{slate.500}',
-          600: '{slate.600}',
-          700: '{slate.700}',
-          800: '{slate.800}',
-          900: '{slate.900}',
-          950: '{slate.950}',
-        },
+        surface: '{surface.color}',
       },
     },
   },
