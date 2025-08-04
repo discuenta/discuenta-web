@@ -141,12 +141,22 @@ const CustomPreset = definePreset(Aura, {
             color: '{slate.200}',
           },
         },
+        desktopSidebar: {
+          border: {
+            color: '#ffffff',
+          },
+        },
       },
       dark: {
         sidebar: {
           background: '{slate.900}',
           border: {
             color: '{slate.700}',
+          },
+        },
+        desktopSidebar: {
+          border: {
+            color: '{slate.900}',
           },
         },
       },
