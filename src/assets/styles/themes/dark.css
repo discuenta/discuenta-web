@@ -1,0 +1,18 @@
+:root[class="app-dark"] {
+    color-scheme: dark;
+
+    /* Dark theme colors mapping from PrimeVue */
+    --body-color: var(--p-text-color);
+    --body-bg: var(--p-surface-950);
+    --surface-0: var(--p-surface-950);
+    --surface-50: var(--p-surface-900);
+    --surface-100: var(--p-surface-800);
+    --surface-200: var(--p-surface-700);
+    --surface-300: var(--p-surface-600);
+    --surface-950: var(--p-surface-50);
+    --sidebar-bg: var(--p-surface-900);
+
+    /* Apply dark theme colors */
+    color: var(--body-color);
+    background-color: var(--body-bg);
+}
