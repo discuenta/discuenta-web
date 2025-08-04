@@ -1,6 +1,8 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { Menu as PvMenu } from 'primevue';
 
+const emit = defineEmits(['sidebar-changed']);
 const isMobile = ref(false);
 const visible = ref(false);
 const expanded = ref(false);
@@ -8,6 +10,12 @@ let mediaQuery;
 
 function checkMobile() {
   isMobile.value = window.innerWidth <= 768;
+  if (!isMobile.value) {
+    expanded.value = true;
+    emit('sidebar-changed', { expanded: true, isMobile: false });
+  } else {
+    emit('sidebar-changed', { expanded: false, isMobile: true });
+  }
 }
 
 function open() {
@@ -15,6 +23,7 @@ function open() {
     visible.value = true;
   } else {
     expanded.value = !expanded.value;
+    emit('sidebar-changed', { expanded: expanded.value, isMobile: false });
   }
 }
 
@@ -54,18 +63,28 @@ defineExpose({ open, close });
   <div v-else :class="['desktop-sidebar', { expanded: expanded }]">
     <div class="sidebar-content">
       <p>Menú escritorio</p>
+      <pv-menu class="menu-content">
+        <template #start>
+          <div>Hola Menu</div>
+        </template>
+      </pv-menu>
     </div>
   </div>
 </template>
 
 <style scoped>
+:deep(.p-menu) {
+  border-color: var(--p-desktop-sidebar-border-color);
+  transition: 0.3s ease;
+}
+
 .desktop-sidebar {
   position: fixed;
   left: 0;
   top: 0;
   height: 100vh;
-  background: var(--surface-50);
-  border-right: 1px solid var(--surface-200);
+  background: var(--p-sidebar-background);
+  border-right: 1px solid var(--p-sidebar-border-color);
   transition:
     transform 0.3s ease,
     background-color 0.3s ease,
