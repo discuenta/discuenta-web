@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    min-width: var(--min-width);
+    min-height: 100vh;
+    font-family: var(--font-family), sans-serif;
+    line-height: var(--line-height-base);
+    font-weight: var(--font-weight-normal);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: var(--transition-theme);
+}
+
+* {
+    box-sizing: border-box;
+}
