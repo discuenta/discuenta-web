@@ -45,12 +45,11 @@ const emit = defineEmits(['toggle-sidebar']);
   width: 100%;
   max-width: none;
   margin: 0;
-  padding: 1rem 2rem;
+  padding: 0 1rem;
   box-sizing: border-box;
   min-height: 4rem;
   border-bottom: 1px solid var(--surface-200);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  background: var(--surface-50);
   transition: 0.3s ease;
 }
 
